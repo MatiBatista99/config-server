@@ -21,7 +21,7 @@ spring:
     gateway:
       routes:
         - id: person-service
-          uri: lb://person-service
+          uri:  http://localhost:8084/
           predicates:
             - Path=/person/**
           filters:
