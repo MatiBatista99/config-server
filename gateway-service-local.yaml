@@ -27,3 +27,18 @@ spring:
             - Path=/person/**
           filters:
             - StripPrefix=1
+         # Ruta dinámica para Swagger UI
+        - id: swagger-ui-person-service
+          uri: lb://person-service  # Usando Eureka para resolver el servicio
+          predicates:
+            - Path=/person/swagger-ui.html
+          filters:
+            - RewritePath=/person/swagger-ui.html, /swagger-ui.html
+
+        # Ruta dinámica para las rutas de API Docs (swagger.json)
+        - id: swagger-api-docs-person-service
+          uri: lb://person-service
+          predicates:
+            - Path=/person/v3/api-docs/**
+          filters:
+            - RewritePath=/person/v3/api-docs/(?<segment>.*), /v3/api-docs/${segment}
