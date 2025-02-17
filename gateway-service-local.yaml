@@ -15,8 +15,7 @@ springdoc:
     path: /swagger-doc/v3/api-docs  # Ruta para obtener los OpenAPI docs
   swagger-ui:
     path: /swagger-doc/swagger-ui.html
-  packages-to-scan:
-    - com.eldar.person_service.controllers
+
 
 
 management:
