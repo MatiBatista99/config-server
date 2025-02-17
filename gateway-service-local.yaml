@@ -18,6 +18,8 @@ springdoc:
     urls:
       - url: /person/v3/api-docs  # Ruta que apunta al Swagger de `person-service` a través del Gateway
         name: person-service
+      - url: /product/v3/api-docs  # Ruta que apunta al Swagger de `person-service` a través del Gateway
+        name: product-service
 
 
 
@@ -39,6 +41,7 @@ spring:
             - Path=/person/**
           filters:
             - StripPrefix=1
+            
          - id: product-service
            uri:  lb://product-service
            predicates:
