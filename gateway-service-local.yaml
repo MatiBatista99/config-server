@@ -15,6 +15,9 @@ springdoc:
     path: /swagger-doc/v3/api-docs  # Ruta para obtener los OpenAPI docs
   swagger-ui:
     path: /swagger-doc/swagger-ui.html
+  urls:
+      - url: /swagger-doc/v3/api-docs/person-service  # Ruta que apunta al Swagger de `person-service` a través del Gateway
+        name: person-service
 
 
 
