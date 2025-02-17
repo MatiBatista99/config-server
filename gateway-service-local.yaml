@@ -35,4 +35,4 @@ spring:
           predicates:
             - Path=/person/**
           filters:
-            -  RewritePath=/person/(?<segment>.*), /$\{segment}
+            - StripPrefix=1
