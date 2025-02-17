@@ -16,8 +16,8 @@ springdoc:
   swagger-ui:
     path: /swagger-doc/swagger-ui.html
     urls:
-        - url: /person/v3/api-docs  # Ruta que apunta al Swagger de `person-service` a través del Gateway
-          name: person-service
+      - url: /person/v3/api-docs  # Ruta que apunta al Swagger de `person-service` a través del Gateway
+        name: person-service
 
 
 
